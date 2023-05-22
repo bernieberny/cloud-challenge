@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>My First Webpage</title>
+    </head>
+    <body>
+        <h1>I love coffee</h1>
+        <p>Hello world!</p>
+    </body>
+
+    <a href="resume.html"><img src="coffee.jpg" width=500/></a>
+
+    <!-- CORS demo -->
+    
+    <script>
+       
+        fetch('https://9rb3gd5fik.execute-api.us-east-1.amazonaws.com/default/incrementVisitors')
+        .then(response => response.json())
+        .then(response => {document.getElementById("counter").innerHTML = response.body})
+        .then(data => console.log(data))
+       
+        
+    </script>
+   <div id="counter"> </div>
+    <!-- <script src="scripts/visitCounter.js"></script>-->
+</html>
